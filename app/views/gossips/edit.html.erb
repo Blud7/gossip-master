@@ -1,0 +1,12 @@
+<h1>Éditer mon gossip</h1>
+
+<p>
+Tape ici ton nouveau Gossip, petite balance :
+
+	<form action="create" method="POST">
+	  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	  <input type="text" name="content">
+	  <input type="submit" class="btn btn-primary" value="Modifier mon gossip">
+	</form>
+
+</p>

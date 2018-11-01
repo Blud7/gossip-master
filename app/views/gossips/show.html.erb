@@ -1,0 +1,18 @@
+<h1> Modifier mon gossip </h1> <br>
+
+
+ <h5> <%= @gossip.content %> </h5>
+<div class= "form-group" >
+
+<a href="<%=  gossips_index_path %>" class='btn btn-primary'> Revenir à l'index </a>
+<br><br>
+
+<a href="<%= gossips_edit_path %>" class='btn btn-default'> Éditer </a>
+<br><br>
+
+<a href="<%= gossips_destroy_path %>" class='btn btn-danger' data-confirm="Êtes-vous sûr de vouloir supprimer ce gossip ? Cette action est irréversible." data-method="DELETE"> Supprimer </a>
+<br><br>
+
+<a href="/gossips/new" class='btn btn-success'> Créer un nouveau gossip </a>
+
+</div>

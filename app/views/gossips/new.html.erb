@@ -1,0 +1,21 @@
+<p>
+
+<!-- 	<form action="create" method="POST">
+	  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	 Mon Gossip : <input type="area" id="content" name="content">
+	 Choisir un pseudo (anonyme) : <input type="text" id="anonymous_gossiper" name="anonymous_gossiper">
+	  <input type="submit" class="btn btn-primary" value="Créer un gossip">
+	</form>
+ -->
+  <%= form_for @gossip, url: {action: "create"}, method: "post" do |f| %>
+   <%= label_tag 'Pseudo :' %>
+   <%= f.text_field :anonymous_gossiper %> <br> <br> 
+
+
+    <%= label_tag 'Contenu :' %>
+    <%= f.text_area :content, size: "100x1" %> <br> <br>
+    <%= f.submit "Ok pour le formulaire 3 ! (form_for)" %>
+  <% end %>
+
+
+</p>
