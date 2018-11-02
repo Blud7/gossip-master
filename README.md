@@ -1,24 +1,16 @@
-# README
+# Version finale du site The Gossip Project.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Le lien Heroku (https://motherfucking-gossip.herokuapp.com/) ne fonctionne pas bien, donc pour voir l'application finale :
 
-* Ruby version
+* Cloner le repo
+* Faire un bundle install
+* Faire un rails db:create
+* Faire un rails db:migrate
+* Faire un rails db:seed
+* Taper "rails server" sur le terminal
+* Aller à l'adresse localhost:3000
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Bon week-end !
