@@ -1,13 +1,18 @@
-<br> <h2> Bienvenue sur The Gossip Project. Voici la liste de tous les gossips à ce jour : </h2> <br>
+<div class="center jumbotron">
+
+
+ <h2> Voici la liste de tous les gossips à ce jour : </h2> <br>
 <p>
 
 <% @gossips.each do |key| %>
 <h6>
 <i> ''<%= key.content %>'' </i> <br>
-Auteur: <b> <%= key.anonymous_gossiper %>      <%= link_to "Lâcher un commentaire / Modifier le gossip", gossips_show_path, method: :get %> </b>
+Auteur: <b> <%= key.anonymous_gossiper %>      <%= link_to "Lâcher un commentaire / Modifier le gossip", gossip_path(key.id), method: :get %> </b>
 
 </h6>
 
 <br><br>
 
 <% end %> </p>
+
+</div>

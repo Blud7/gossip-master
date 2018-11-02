@@ -1,48 +1,44 @@
 class GossipsController < ApplicationController
+
+  def index
+  	@gossips = Gossip.all
+  end
   
   def new
   	@gossip = Gossip.new
   end
 
   def show
-  	@gossip = Gossip.find(params["format"])
+  	@gossip = Gossip.find(params[:id])
   end
 
-
   def create
-  	@gossip = Gossip.new
-  	@gossip.id = params["gossip"]["id"]
-  	@gossip.content = params["gossip"]["content"]
-  	@gossip.anonymous_gossiper = params["gossip"]["anonymous_gossiper"]
+  	@gossip = Gossip.create(parameters)
 
-  	p "Voici le @gossip créé :"
   	p @gossip
-  	p "fin"
-  	@gossip.save
+  	redirect_to gossips_path(@gossip.id)
   end
 
   def edit
-	@gossip = Gossip.new
+  	@gossip = Gossip.find(params[:id])
 	@gossip.save
   end
 
   def update
-  	@gossip = Gossip.new
-  	@gossip.id = params[:id]
-  	@gossip.content = params["content"]
-  	@gossip.anonymous_gossiper = params["anonymous_gossiper"]
-
-  	p @gossip
-  	@gossip.save
+  	@gossip = Gossip.find(params[:id])
+  	@gossip.update(parameters)
+  	redirect_to gossip_path(@gossip.id)
   end 
 
   def destroy
-  	@gossip = Gossip.find(params["gossip"]["id"])
-  	p "voici le @gossip :"
-  	p @gossip
-  	p "fin"
+  	@gossip = Gossip.find(params[:id])
+  	@gossip.delete
+  	redirect_to gossips_path
+  end
 
-  	redirect_to gossips_index_path
+  private
+  def parameters
+  	params.require(:gossip).permit(:anonymous_gossiper, :content)
   end
 
 end

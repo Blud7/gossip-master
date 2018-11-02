@@ -6,4 +6,8 @@
 
 <h5> <%= @gossip.content %> </h5>   <br>
 
-<a href="<%= gossips_show_path(@gossip.id) %>" class="btn btn-primary"> Modifier ce gossip </a>
+<% @gossips.each do |key| %>
+
+<a href="<%= gossips_show_path(key.id) %>" class="btn btn-primary"> Modifier ce gossip </a>
+
+<% end %>
