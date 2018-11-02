@@ -17,3 +17,6 @@ Pour voir l'application marcher, il faut :
 
 
 Projet réalisé par Paul Rivière et Patrick Razafindrakoto. Et c'est loin d'être fini.
+
+
+# Bon week-end !
