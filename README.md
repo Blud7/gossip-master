@@ -1,22 +1,24 @@
-# The Gossip Project - Version (semi-)finale
+# README
 
-Vous trouverez à cette adresse la page d'accueil du Gossip Project : https://motherfucking-gossip.herokuapp.com/
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Je dis page d'accueil car on a dû réutiliser l'ancienne application, et de là impossible de créer la database : donc aucun des onglets ne redirige comme il faut.
+Things you may want to cover:
 
-Pour voir l'application marcher, il faut :
+* Ruby version
 
-* Cloner le repo
-* Faire un bundle install
-* Faire un rails db:create
-* Faire un rails db:migrate
-* Faire un rails db:seed 
-* Faire un rails server
-* Aller sur localhost:3000
+* System dependencies
 
+* Configuration
 
+* Database creation
 
-Projet réalisé par Paul Rivière et Patrick Razafindrakoto. Et c'est loin d'être fini.
+* Database initialization
 
+* How to run the test suite
 
-# Bon week-end !
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
